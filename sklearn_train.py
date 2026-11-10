@@ -133,7 +133,7 @@ def main():
     cm = confusion_matrix(y_test, y_pred)
     fig, ax = plt.subplots(figsize=(6, 5))
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=iris.target_names)
-    disp.plot(ax=ax, colorbar=False, cmap="Blues")
+    disp.plot(ax=ax, cmap="Blues")
     ax.set_title("Confusion Matrix — Iris Random Forest", pad=12)
     fig.tight_layout()
     plot_path = os.path.join(args.output_dir, "confusion_matrix.png")
